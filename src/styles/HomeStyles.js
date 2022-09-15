@@ -17,20 +17,25 @@ export const ContainerSearch = styled.div`
     width: 400px;
     height: 50px;
     background-color: ${(a) => {
+      return a.theme.NavBarbgColor;
+    }};
+    box-shadow: ${(a) => {
       return a.theme.NavBarContainerBshadow;
     }};
-    display: flex;
-    color: inherit;
-
-    box-shadow: 0px 0px 5px hsl(0, 0%, 90%);
+    color: ${(a) => {
+      return a.theme.color;
+    }};
     border-radius: 5px;
+    display: flex;
   }
   i {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 15px;
-    color: hsl(200, 15%, 6%);
+    color: ${(a) => {
+      return a.theme.color;
+    }};
     opacity: 50%;
   }
   input {
@@ -44,7 +49,9 @@ export const ContainerSearch = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(200, 15%, 8%);
+    color: ${(a) => {
+      return a.theme.color;
+    }};
     font-weight: 600;
     font-size: 14px;
     font-family: "Nunito Sans", sans-serif;
@@ -55,9 +62,15 @@ export const ContainerSearch = styled.div`
     cursor: pointer;
     width: 200px;
     height: 50px;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(200, 15%, 8%);
-    box-shadow: 0px 0px 5px hsl(0, 0%, 90%);
+    background-color: ${(a) => {
+      return a.theme.NavBarbgColor;
+    }};
+    box-shadow: ${(a) => {
+      return a.theme.NavBarContainerBshadow;
+    }};
+    color: ${(a) => {
+      return a.theme.color;
+    }};
     border-radius: 5px;
     z-index: 0;
   }
@@ -78,10 +91,14 @@ export const ContainerSearch = styled.div`
     align-items: center;
   }
   button:hover {
-    background-color: hsl(0, 0%, 90%);
+    background-color: ${(a) => {
+      return a.theme.NavBarbgColor;
+    }};
   }
   .dropdown {
-    color: hsl(200, 15%, 8%);
+    color: ${(a) => {
+      return a.theme.color;
+    }};
     width: 100%;
     height: 50px;
     display: flex;
@@ -96,9 +113,15 @@ export const ContainerSearch = styled.div`
   }
   .dropdown-content {
     display: none;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(200, 15%, 8%);
-    box-shadow: 0px 0px 5px hsl(0, 0%, 90%);
+    background-color: ${(a) => {
+      return a.theme.NavBarbgColor;
+    }};
+    box-shadow: ${(a) => {
+      return a.theme.NavBarContainerBshadow;
+    }};
+    color: ${(a) => {
+      return a.theme.color;
+    }};
     border-radius: 5px;
     margin-top: 2px;
     padding-top: 10px;
@@ -116,9 +139,13 @@ export const ContainerCountry = styled.div`
   margin-top: 3%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  box-shadow: 0px 0px 10px hsl(0, 0%, 80%);
+  box-shadow: ${(a) => {
+    return a.theme.countryBoxShadow;
+  }};
   &:hover {
-    box-shadow: 0px 0px 10px hsl(0, 0%, 70%);
+    box-shadow: ${(a) => {
+      return a.theme.countryHover;
+    }};
   }
   .containerBox {
     /* background-color: aqua; */

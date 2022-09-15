@@ -1,11 +1,11 @@
-import { ContainerCountry, SetCol } from "./../../styles/HomeStyles";
-export function Country({ data }) {
-  return <CountryBox data={data} />;
+import { ContainerCountry } from "./../../styles/HomeStyles";
+export function Country({ data, theme }) {
+  return <CountryBox data={data} theme={theme} />;
 }
-const CountryBox = ({ data }) => {
+const CountryBox = ({ data, theme }) => {
   // console.log(data);
   return (
-    <ContainerCountry>
+    <ContainerCountry theme={theme}>
       <div className="containerBox">
         <div className="imageContainer">
           <img src={data.flag} alt={`CountryFlag`} />

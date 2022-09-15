@@ -41,7 +41,7 @@ export function Home({ theme }) {
     return (
       <SetCol>
         {data.map((a) => {
-          return <Country data={a} key={uuid()} />;
+          return <Country data={a} key={uuid()} theme={theme} />;
         })}
       </SetCol>
     );

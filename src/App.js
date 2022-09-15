@@ -11,6 +11,8 @@ function App() {
     NavBarbgColor: "white",
     color: "hsl(200, 15%, 8%)",
     bgColor: "hsl(0, 0%, 98%)",
+    countryBoxShadow: "0px 0px 10px hsl(0, 0%, 80%)",
+    countryhover: "0px 0px 10px hsl(0, 0%, 100%);",
   };
   const DarkTheme = {
     NavBarContainerBshadow: "1px 2px 5px hsl(207, 26%, 20%)",
@@ -18,6 +20,8 @@ function App() {
     NavBarbgColor: "hsl(209, 23%, 22%)",
     color: " hsl(0, 0%, 100%)",
     bgColor: "hsl(207, 26%, 17%)",
+    countryBoxShadow: "0px 0px 10px hsl(0, 0%, 80%)",
+    countryHover: "0px 0px 10px hsl(0, 0%, 70%);",
   };
   const [darkMode, setDarkMode] = useState(false);
   const [theme, setTheme] = useState(lightTheme);
