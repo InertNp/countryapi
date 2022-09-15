@@ -2,13 +2,14 @@ import { faAngleDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ContainerSearch } from "../../styles/HomeStyles";
 
-export function Search() {
-  return <SearchBar />;
+export function Search({ theme }) {
+  // console.log(theme);
+  return <SearchBar theme={theme} />;
 }
 
-const SearchBar = () => {
+const SearchBar = ({ theme }) => {
   return (
-    <ContainerSearch>
+    <ContainerSearch theme={theme}>
       <form action="#">
         <div className="search">
           <i>

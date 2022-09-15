@@ -8,13 +8,18 @@ import {
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export function NavBar() {
+export function NavBar({ onclick, theme }) {
   return (
-    <NavBarContainer>
+    <NavBarContainer theme={theme}>
       <Container90>
         <NavBarFlexContainer>
           <NavText>Where in the World?</NavText>
-          <DarkButton>
+          <DarkButton
+            onClick={(a) => {
+              onclick();
+            }}
+            theme={theme.darkButtonHoverShadow}
+          >
             <FontAwesomeIcon icon={faMoon} className="icon" />
             <p>Dark Mode</p>
           </DarkButton>

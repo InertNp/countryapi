@@ -3,11 +3,18 @@ import styled from "styled-components";
 export const NavBarContainer = styled.nav`
   width: 100%;
   height: 10%;
-  background-color: white;
+  background-color: ${(a) => {
+    return a.theme.NavBarbgColor;
+  }};
+  color: ${(a) => {
+    return a.theme.color;
+  }};
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 2px 5px hsl(0, 0%, 95%);
+  box-shadow: ${(a) => {
+    return a.theme.NavBarContainerBshadow;
+  }};
 `;
 export const NavBarFlexContainer = styled.div`
   display: flex;
@@ -20,6 +27,7 @@ export const NavText = styled.p`
   font-weight: 800;
 `;
 export const DarkButton = styled.button`
+  color: inherit;
   font-size: 16px;
   font-weight: 300;
   background-color: transparent;
@@ -30,7 +38,9 @@ export const DarkButton = styled.button`
   justify-content: center;
   align-items: center;
   &:hover {
-    box-shadow: 0px 0px 5px hsl(0, 0%, 90%);
+    box-shadow: ${(a) => {
+      return a.theme;
+    }};
     border-radius: 20px;
   }
   p {

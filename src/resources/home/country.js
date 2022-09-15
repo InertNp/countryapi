@@ -1,23 +1,24 @@
-import { ContainerCountry } from "./../../styles/HomeStyles";
-export function Country() {
-  return <CountryBox />;
+import { ContainerCountry, SetCol } from "./../../styles/HomeStyles";
+export function Country({ data }) {
+  return <CountryBox data={data} />;
 }
-const CountryBox = () => {
+const CountryBox = ({ data }) => {
+  // console.log(data);
   return (
     <ContainerCountry>
       <div className="containerBox">
         <div className="imageContainer">
-          <img src={`sth`} alt={`CountryFlag`} />
+          <img src={data.flag} alt={`CountryFlag`} />
         </div>
         <div className="informationBox">
-          <h1>CountryName</h1>
+          <h1>{data.country}</h1>
           <div className="more-info">
-            <label htmlFor="population">Population:</label>
-            <p id="population">{``}</p>
-            <label htmlFor="region">Population:</label>
-            <p id={`region`}>{``}</p>
-            <label htmlFor="capital">Population:</label>
-            <p id="capital">{`Moon`}</p>
+            Population:<data>{data.population}</data>
+            <br />
+            Region:<data>{data.region}</data>
+            <br />
+            Capital:<data>{data.capital}</data>
+            <br />
           </div>
         </div>
       </div>

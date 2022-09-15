@@ -5,6 +5,7 @@ export const ContainerHome = styled.div`
   width: 100%;
   height: 100%;
   padding-top: 2%;
+  color: inherit;
 `;
 export const ContainerSearch = styled.div`
   background-color: transparent;
@@ -15,9 +16,12 @@ export const ContainerSearch = styled.div`
   .search {
     width: 400px;
     height: 50px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: ${(a) => {
+      return a.theme.NavBarContainerBshadow;
+    }};
     display: flex;
-    color: hsl(200, 15%, 8%);
+    color: inherit;
+
     box-shadow: 0px 0px 5px hsl(0, 0%, 90%);
     border-radius: 5px;
   }
@@ -106,30 +110,83 @@ export const ContainerSearch = styled.div`
 `;
 
 export const ContainerCountry = styled.div`
-  width: 20%;
+  width: 300px;
+  min-width: 200px;
+  height: 350px;
   margin-top: 3%;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0px 0px 10px hsl(0, 0%, 80%);
+  &:hover {
+    box-shadow: 0px 0px 10px hsl(0, 0%, 70%);
+  }
   .containerBox {
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 100%;
-    height: 300px;
+    height: 100%;
     display: flex;
     flex-direction: column;
   }
+
   .imageContainer {
     width: 100%;
-    height: 50%;
-    background-color: grey;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
+  .imageContainer img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
   .informationBox {
     height: 50%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    text-transform: capitalize;
   }
   .informationBox h1 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
   }
   .more-info {
     font-size: 14px;
+    font-weight: 600;
+    color: hsl(200, 15%, 8%);
+    text-align: justify;
+    padding-left: 20px;
+    /* text-align: left; */
+    /* background-color: red; */
+  }
+  .more-info data {
+    font-size: 14px;
+    font-weight: 300;
+  }
+`;
+export const SetCol = styled.div`
+  display: flex;
+  /* background-color: red; */
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+export const LoadingScreenContainer = styled.div`
+  margin-top: 10%;
+  width: 100%;
+  /* background-color: red; */
+  color: hsl(0, 0%, 60%);
+  height: 400px;
+  .icon2 {
+    width: 100%;
+    height: 100%;
   }
 `;
