@@ -114,13 +114,13 @@ export const ContainerSearch = styled.div`
   .dropdown-content {
     display: none;
     background-color: ${(a) => {
-      return a.theme.NavBarbgColor;
+      return a.theme.bgColor;
     }};
     box-shadow: ${(a) => {
       return a.theme.NavBarContainerBshadow;
     }};
     color: ${(a) => {
-      return a.theme.color;
+      return a.theme.dropColor;
     }};
     border-radius: 5px;
     margin-top: 2px;
@@ -139,8 +139,14 @@ export const ContainerCountry = styled.div`
   margin-top: 3%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  background-color: ${(a) => {
+    return a.theme.NavBarbgColor;
+  }};
   box-shadow: ${(a) => {
     return a.theme.countryBoxShadow;
+  }};
+  color: ${(a) => {
+    return a.theme.color;
   }};
   &:hover {
     box-shadow: ${(a) => {
@@ -188,7 +194,7 @@ export const ContainerCountry = styled.div`
   .more-info {
     font-size: 14px;
     font-weight: 600;
-    color: hsl(200, 15%, 8%);
+    color: inherit;
     text-align: justify;
     padding-left: 20px;
     /* text-align: left; */
